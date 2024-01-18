@@ -1,0 +1,60 @@
+<link rel="stylesheet" href="styles.css">
+<div class="main">
+    <div class="sub_main">
+        <div id="selectdata">
+            <p id="selectTxt">Selcet Cousres ...</p>
+            <img src="up.png" id="arw"/>
+        </div>
+        <ul id="list" class="hide">
+            <li class="options">
+                <img src="html.png"/>
+                <p>html</p>
+            </li>
+
+            <li class="options">
+                <img src="js.png"/>
+                <p>js</p>
+            </li>
+
+            <li class="options">
+                <img src="react.png"/>
+                <p>react</p>
+            </li>
+
+            <li class="options">
+                <img src="node.png"/>
+                <p>node</p>
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+
+<script>
+
+    const arw=document.getElementById('arw')
+    const list=document.getElementById('list')
+    const selectTxt=document.getElementById('selectTxt')
+    const selectdata=document.getElementById('selectdata')
+    const options=document.getElementsByClassName("options")
+
+    selectdata.onclick=function(){
+        list.classList.toggle('hide')
+        arw.classList.toggle('rotate')
+    }
+
+    for(option of options){
+        option.onclick=function(){
+            selectTxt.innerHTML=this.innerHTML
+            list.classList.toggle('hide')
+            arw.classList.toggle('rotate')
+
+        }
+
+
+    }
+
+
+
+</script>
